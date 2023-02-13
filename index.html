@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Love Letter and Reminder</title>
+
+    <link rel="stylesheet" href="stle.css">
+  </head>
+  <body>
+    <h1>Happy Valentine's</h1>
+    <p>
+      Dear My Love,<br><br>
+      I hope this letter finds you in good health and high spirits. I just wanted to take a moment to tell you how much you mean to me. You have brought so much joy and love into my life and I am grateful to have you by my side. I promise to always support you, to make you laugh, and to be there for you through thick and thin. I love you now and forever.<br><br>
+      Love,<br>
+      Your future husband,
+    </p>
+    <p id="reminder"></p>
+    <p id="quote"></p>
+    <button onclick="getQuote()">Try again!</button>
+    <button onclick="showMessage()">Click Me!</button>
+    <script>
+        // Add your JavaScript code here
+        var d = new Date();
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var reminder = "Don't forget to smile even though you're tired! :)";
+        document.getElementById("reminder").innerHTML = "Today is " + days[d.getDay()] + ": " + reminder;
+        
+        var quotes = [
+          "The future belongs to those who believe in the beauty of their dreams.",
+          "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
+          "Don't let yesterday take up too much of today.",
+          "Hardships often prepare ordinary people for an extraordinary destiny.",
+          "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+          "I love you more and more each day.",
+          "You are my sunshine on a cloudy day.",
+          "Every moment with you is a blessing.",
+          "Together is a beautiful place to be.",
+          "Your love is my biggest inspiration.",
+          "You are my home, my safe haven, and my everything.",
+          "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart.",
+          "Do what is right, not what is easy nor what is popular.",
+          "Start each day with a positive thought and a grateful heart.",
+        ];
+        
+        function getQuote() {
+          var randomIndex = Math.floor(Math.random() * quotes.length);
+          document.getElementById("quote").innerHTML = quotes[randomIndex];
+        }
+        
+        function showMessage() {
+          alert("I love you and I miss you");
+        }
+      </script>
+  </body>
+</html>
+
+
+  
